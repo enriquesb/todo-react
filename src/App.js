@@ -1,11 +1,18 @@
 import "./App.css";
+import { useEffect } from "react";
+import NewTaskForm from "./components/NewTaskForm";
 
 function App() {
+  useEffect(() => {
+    if (localStorage.getItem("tasksArray") === null) {
+      localStorage.setItem("tasksArray", JSON.stringify([]));
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hola</h1>
-      </header>
+      <h1>Tasks</h1>
+      <NewTaskForm />
     </div>
   );
 }
