@@ -1,14 +1,11 @@
 import "./App.css";
-import { useEffect } from "react";
 import NewTaskForm from "./components/NewTaskForm";
 
-function App() {
-  useEffect(() => {
-    if (localStorage.getItem("tasksArray") === null) {
-      localStorage.setItem("tasksArray", JSON.stringify([]));
-    }
-  }, []);
+if (localStorage.getItem("tasksArray") === null) {
+  localStorage.setItem("tasksArray", JSON.stringify([]));
+}
 
+function App() {
   return (
     <div className="App">
       <h1>Tasks</h1>
