@@ -33,6 +33,11 @@ function App() {
     setTasksArray(newTasksArray);
   }
 
+  function deleteTask(deleteId) {
+    const newTasksArray = tasksArray.filter((task) => task.id !== deleteId);
+    setTasksArray(newTasksArray);
+  }
+
   const [tasksArray, setTasksArray] = useState(createInitialTaskArray);
 
   useEffect(() => {
@@ -45,7 +50,7 @@ function App() {
     <div className="App">
       <h1>Tasks</h1>
       <NewTaskForm handleSubmit={addTask} />
-      <TaskItem tasksArray={tasksArray} />
+      <TaskItem tasksArray={tasksArray} deleteTask={deleteTask} />
     </div>
   );
 }
