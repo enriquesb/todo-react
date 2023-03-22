@@ -45,7 +45,7 @@ function App() {
     <div className="App">
       <h1>Tasks</h1>
       <NewTaskForm handleSubmit={addTask} />
-      <TaskItem />
+      <TaskItem tasksArray={tasksArray} />
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.task-item {
+  border: 1px solid;
+}
+
+.task-item > button {
+  float: right;
+}
+
+.task-item > p {
+  display: inline-block;
+  margin: auto 0;
+}
