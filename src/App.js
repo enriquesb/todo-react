@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import NewTaskForm from "./components/NewTaskForm";
-import TaskItem from "./components/TaskItem";
+import TaskItems from "./components/TaskItems";
 
 if (localStorage.getItem("tasksArray") === null) {
   localStorage.setItem("tasksArray", JSON.stringify([]));
@@ -38,6 +38,20 @@ function App() {
     setTasksArray(newTasksArray);
   }
 
+  function toggleCrossOut(crossOutId) {
+    const newTasksArray = tasksArray.map((task) => {
+      if (task.id === crossOutId) {
+        return {
+          ...task,
+          crossOut: !task.crossOut,
+        };
+      } else {
+        return task;
+      }
+    });
+    setTasksArray(newTasksArray);
+  }
+
   const [tasksArray, setTasksArray] = useState(createInitialTaskArray);
 
   useEffect(() => {
@@ -50,7 +64,7 @@ function App() {
     <div className="App">
       <h1>Tasks</h1>
       <NewTaskForm handleSubmit={addTask} />
-      <TaskItem tasksArray={tasksArray} deleteTask={deleteTask} />
+      <TaskItems tasksArray={tasksArray} deleteTask={deleteTask} toggleCrossOut={toggleCrossOut} />
     </div>
   );
 }

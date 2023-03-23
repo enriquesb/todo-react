@@ -10,3 +10,7 @@
   display: inline-block;
   margin: auto 0;
 }
+
+.crossedOut {
+  text-decoration: line-through;
+}
