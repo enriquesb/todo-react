@@ -8,17 +8,23 @@ export default function NewTaskForm({ handleSubmit }) {
   }
 
   return (
-    <div>
-      <p>Hola mundo</p>
+    <div className="new-task-card">
+      <h1>Tasks</h1>
       <form
+        className="new-task-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleSubmit(taskInput);
           setTaskInput("");
         }}
       >
-        <input value={taskInput} onChange={handleInputChange} />
-        <button disabled={!taskInput}>Add</button>
+        <div className="input-wrapper">
+          <input type="text" className="new-task-input" value={taskInput} onChange={handleInputChange} />
+        </div>
+
+        <button className="add-task-button" disabled={!taskInput}>
+          <b>Add</b>
+        </button>
       </form>
     </div>
   );

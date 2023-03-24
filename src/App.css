@@ -1,0 +1,121 @@
+:root {
+  --purple: hsl(248, 32%, 49%);
+  --green: hsl(154, 59%, 51%);
+  --red: hsl(0, 100%, 74%);
+
+  background-color: var(--red);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  max-width: 25rem;
+  margin: 5rem auto 0;
+}
+
+.new-task-card {
+  background-color: var(--purple);
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.4em 1.5em;
+  margin-bottom: 0.8em;
+  box-shadow: 0 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.new-task-form {
+  display: flex;
+  align-items: flex-end;
+  margin: 0.1em 0 1em;
+}
+
+.input-wrapper {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.new-task-input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.add-task-button {
+  height: 2rem;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1rem;
+}
+
+.add-task-button:disabled {
+  background-color: gray;
+}
+
+.stored-tasks-card {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  box-shadow: 0 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.task-item {
+  display: flex;
+  border: 1px solid var(--purple);
+  align-items: center;
+  border-radius: 0.4em;
+  padding: 0.2em;
+  margin: 0;
+}
+
+.task-item > input {
+  margin: 0.5em;
+}
+
+input:checked {
+  background-color: red;
+}
+
+.task-text {
+  flex: 1;
+  margin: 0.2em;
+}
+
+.task-item > button {
+  margin: 0.1em 0.5em;
+  background-color: var(--green);
+  border: none;
+  color: white;
+  padding: 0.1em 0.2em;
+  font-size: 1rem;
+  border-radius: 0.5em;
+}
+
+button > i {
+  margin: 0.5em;
+}
+
+.task-item ~ .task-item {
+  margin-top: 0.5em;
+}
+
+.crossedOut {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.no-tasks {
+  text-align: center;
+}
+
+.no-tasks > p {
+  margin: 0;
+}
