@@ -18,7 +18,7 @@ With this project, I build a to-do App with React, using Hooks such as useState 
 
 ### Screenshot
 
-![screenshot of the to-do app](./screenshot/ss-todo-v01.png)
+![screenshot of the to-do app](./screenshots/ss-todo-v01.png)
 
 ### Links
 
